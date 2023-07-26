@@ -1,0 +1,338 @@
+<!-- Name: Prabath Reddy Sagili Venkata -->
+<!-- G-Number: G01393364 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0, shrink-to-fit=no">   
+    
+    <link rel="stylesheet" href="styles.css">
+	<title>
+		CS Department Survey Page
+	</title>
+
+    <script type = "text/javascript" src="ajax_script.js"></script>
+
+    <script type = "text/javascript" src="cookie_script.js"></script>
+    <script type = "text/javascript" src="computation_script.js"></script>
+    <script type = "text/javascript" src="validate_script.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+    <!-- NOTE!! Bootstrap 4.6.2 required JQUERY to USE the NAVBAR -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</head>
+
+<body>   
+    <div class = "flex-container">
+        
+        <div class="container mt-5">
+
+            <!-- Black with white text -->
+            <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"> -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            CS Department Info Page
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="info_page.html#desc">Description</a>
+                            <a class="dropdown-item" href="info_page.html#msd">MS Degrees</a>
+                            <a class="dropdown-item" href="info_page.html#mscs_table">MS in Computer Science Table</a>
+                            <a class="dropdown-item" href="info_page.html#msai_table">MS in Artificial Intelligence Table</a>
+                            <a class="dropdown-item" href="info_page.html#msds_table">MS in Data Science Table</a>
+                            <a class="dropdown-item" href="info_page.html#msc_table">MS in Cybersecurity Table</a>
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item" href="info_page.html">CS Department Info Page</a>
+                        </div>
+                      </li>
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        CS Department Survey Page
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="survey_page.html#name">Name</a>
+                        <a class="dropdown-item" href="survey_page.html#street">Street</a>
+                        <a class="dropdown-item" href="survey_page.html#city">City</a>
+                        <a class="dropdown-item" href="survey_page.html#state">State</a>
+                        <a class="dropdown-item" href="survey_page.html#zip">Zip</a>
+                        <a class="dropdown-item" href="survey_page.html#phnumber">Phone Number</a>
+                        <a class="dropdown-item" href="survey_page.html#email">Email Id</a>
+                        <a class="dropdown-item" href="survey_page.html#month">HS Graduation Month</a>
+                        <a class="dropdown-item" href="survey_page.html#year">HS Graduation Year</a>
+                        <a class="dropdown-item" href="survey_page.html#checkbox">Most Liked On Campus</a>
+                        <a class="dropdown-item" href="survey_page.html#radio">Info Source</a>
+                        <a class="dropdown-item" href="survey_page.html#likelihood">Likelihood</a>
+                        <a class="dropdown-item" href="survey_page.html#url">URL</a>
+                        <a class="dropdown-item" href="survey_page.html#date">Survey Date</a>
+                        <a class="dropdown-item" href="survey_page.html#comment">Comment Box</a>
+
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="survey_page.html">CS Department Survey Page</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+
+            <br>
+
+            <!-- Heading of the survey page -->
+            <div class="heading"> 
+                <h2>CS DEPARTMENT SURVEY PAGE</h2>
+            </div> 
+
+            <br>
+
+            <!-- autocomplete ="on" to enable autocomplete across the form -->
+            <form target="_self" autocomplete="on" id="survey">
+
+                <!-- Get the First Name using a text box. This is a required Field -->
+                <div class="form-group row">
+                    <label for="name" class="col-sm-3 col-form-label-lg">Name
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="name" placeholder="Enter your name" autofocus required>
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- Get the street using a text box. This is a required Field -->
+                <div class="form-group row">
+                    <label for="street" class="col-sm-3 col-form-label-lg">Street Address
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="street" placeholder="Enter your street" required>
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- Get the zip code using a text box that follows a pattern (only numbers can be entered). This is a required Field -->
+                <div class="form-group row">
+                    <label for="zip" class="col-sm-3 col-form-label-lg">Zipcode
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="text" id="zip" onblur="handleZipBlur()" pattern="[0-9]{5}" placeholder="Enter your 5 digit zipcode" max="99999" required>
+                        <span id="zip-error" style="color: red;"></span>
+                    </div>
+                </div>  
+                
+                <br>
+
+                <!-- Get the city using a text box. This is a required Field -->
+                <div class="form-group row">
+                    <label for="city" class="col-sm-3 col-form-label-lg">City:</label>
+                    <div class="col-sm-4" id="city"></div><br><br>
+                </div> 
+
+                <br>
+                
+                <!-- Get the state using a text box. This is a required Field -->
+                <div class="form-group row">
+                    <label for="state" class="col-sm-3 col-form-label-lg">State:</label>
+                    <div class="col-sm-4" id="state"></div><br><br>
+                </div> 
+
+                <br>
+
+                <!-- Get the phone number using a input box of type phone number following a specific pattern
+                    (123-456-7890). This is a required Field -->
+                <div class="form-group row">
+                    <label for="phnumber" class="col-sm-3 col-form-label-lg">Phone Number
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="tel" id="phnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+                    </div>
+                </div>
+                
+                <br>
+
+                <!-- Get the email address using a input box of type email. It follows a specific pattern by default
+                    because of the email type. This is a required Field -->
+                <div class="form-group row">
+                    <label for="email" class="col-sm-3 col-form-label-lg">Email id
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="email" id="email" placeholder="Format: abc@email.com" required>
+                    </div>
+                </div>  
+                
+                <br>
+
+                <!-- Displays a drop down list of months using datalist tag and a text box to get the year. This is a required Field -->
+                <div class="form-group row">
+                    <label for="month" class="col-sm-5 col-form-label-lg">High School Graduation
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm-10">
+                        <input list="months" name="month" id="month" style="width:235px;" placeholder="Enter your graduation month" required>
+                        <datalist id="months">
+                            <option value="January">
+                            <option value="February">
+                            <option value="March">
+                            <option value="April">
+                            <option value="May">
+                            <option value="June">
+                            <option value="July">
+                            <option value="August">
+                            <option value="September">
+                            <option value="October">
+                            <option value="November">
+                            <option value="December">
+                        </datalist>                          
+                        <input type="text" id="year" name="year" pattern="[0-9]{4}" style="width:140px; height: 30px;" placeholder="Year Eg: 2000" required>         
+                    </div>
+                </div> 
+
+                <br>
+
+                <!-- Displays multiple checkboxes allowing the user to choose or not choose. Not a required Field -->
+                <div class="form-group row" id="checkbox">
+                    <label class="col-sm-8 col-form-label-lg">What do you like most about the campus:
+                        <span class="required">*</span> 
+                    </label>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input type="checkbox" id="students" name="form_checkbox">
+                                <label for="students">Students</label><br>
+                            <input type="checkbox" id="location" name="form_checkbox">
+                                <label for="location">Location</label><br>
+                            <input type="checkbox" id="campus" name="form_checkbox">
+                                <label for="campus">Campus</label><br>
+                            <input type="checkbox" id="dorms" name="form_checkbox">
+                                <label for="dorms">Atmosphere</label><br>
+                            <input type="checkbox" id="sports" name="form_checkbox">
+                                <label for="sports">Dorm Rooms</label><br>
+                            <input type="checkbox" id="atmosphere" name="form_checkbox">
+                                <label for="atmosphere">Sports</label><br>
+                        </div>     
+                    </div>
+                </div> 
+
+                <br>   
+
+                <!-- Displays multiple radio buttons to allow the user to select exactly one option. Required Field -->
+                <div class="form-group row" id="radio">
+                    <label class="col-sm-5 col-form-label-lg">How did you hear about us
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm-10">
+                        <div class="form-check"> 
+                            <input type="radio" id="friends" name="form_radio" required>
+                                <label for="friends">Friends</label><br>
+                            <input type="radio" id="television" name="form_radio">
+                                <label for="television">Television</label><br>
+                            <input type="radio" id="internet" name="form_radio">
+                                <label for="internet">Internet</label><br>
+                            <input type="radio" id="others" name="form_radio">
+                                <label for="others">Others</label><br>
+                        </div>
+                    </div>
+                </div>  
+
+                <br> 
+                
+                <!-- Displays a drop down list of 3 options. Defaulted to "Very Likely". Not a required field -->
+                <div class="form-group row">
+                    <label for="likelihood" class="col-sm-12 col-form-label-lg">How likely are you to recommend this university to other students:</label>
+                    <div class="col-1">
+                        <select id="likelihood" name="likelihood" style="width:130px;">
+                            <option value="vlikely">Very Likely</option>
+                            <option value="likely">Likely</option>
+                            <option value="unlikely">Unlikely</option>
+                        </select>
+                    </div>
+                </div>
+
+                <br> 
+
+                <!-- Get the URL using the url type input field. It is a required field -->
+                <div class="form-group row">
+                    <label for="url" class="col-sm-3 col-form-label-lg">URL
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm">
+                        <input type="url" style="width:270px;" id="url" name="url" placeholder="Format: https://www.something.com" required>
+                    </div>
+                </div> 
+                
+                <br>
+
+                <!-- Get the date of the survey using the date type field. This is a required field -->
+                <div class="form-group row">
+                    <label for="date" class="col-sm-3 col-form-label-lg">Date of Survey
+                        <span class="required">*</span>
+                    </label>
+                    <div class="col-sm">
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>    
+                <br>  
+
+                <!-- Multi-line text input control to collect the comments from the user. This is not a required field -->
+                <div class="form-group row">
+                    <label for="comment" class="col-sm-12 col-form-label-lg">Please provide additional comments if you have any</label>
+                    <div class="col-sm">
+                        <textarea id="comment" name="comment" placeholder="Write some comments if you have any" style="height:100px" rows="8"></textarea>
+                    </div>
+                </div>
+
+                <!-- A text field for the user to type 10 numbers. Upon the user moving out of the field, a function is called to read the entered data -->
+                <div class="form-group row">
+                    <label for="data" class="col-sm-3 col-form-label-lg">Data</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="data" placeholder="Enter ten numbers between 1-100" onblur="computeFunction()"/>
+                    </div>
+                </div>
+
+                <!-- An output field to print the average of 10 numbers -->
+                <div class="form-group row">
+                    <label for="average" class="col-sm-3 col-form-label-lg">Average</label>
+                    <div class="col-sm-4">
+                        <output id="average"></output>
+                    </div>
+                </div> 
+
+                <!-- An output field to print the maximum of 10 numbers -->
+                <div class="form-group row">
+                    <label for="maximum" class="col-sm-3 col-form-label-lg">Maximum</label>
+                    <div class="col-sm-4">
+                        <output id="maximum"></output>
+                    </div>
+                </div> 
+
+                <!-- Submit button and Cancel button created using bootstrap classes -->
+                <!-- Cancel button resets the form -->
+                <!-- Submit button refreshes the page but the previously entered values can be accessed by 
+                     navigating back or can also be seen via the autocomplete feature -->
+                <div class="d-flex justify-content-md-end">
+                    <button id="submit" type="submit" class="btn btn-success mr-2" onclick="validate()">Submit</button>
+                    <button id ="reset" type="reset" class="btn btn-danger">Clear</button>
+                </div>  
+            </form>
+        </div>
+    </div>       
+</body>
+</html>

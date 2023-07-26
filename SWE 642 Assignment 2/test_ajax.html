@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Survey Form</title>
+	<script src="test_ajax.js"></script>
+</head>
+<body>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+
+		<label for="street">Street:</label>
+		<input type="text" id="street" name="street" required><br><br>
+
+		<label for="zip">Zipcode:</label>
+		<input type="text" id="zip" name="zip" onblur="handleZipBlur()" required><br><br>
+
+		<label for="city">City:</label>
+		<div id="city"></div><br><br>
+
+		<label for="state">State:</label>
+		<div id="state"></div><br><br>
+
+		<label for="phone">Telephone Number:</label>
+		<input type="tel" id="phone" name="phone" required><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

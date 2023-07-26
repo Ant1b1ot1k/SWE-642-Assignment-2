@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Survey Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Student Survey Form</h2>
+    <form>
+      <div class="form-group">
+        <label for="data">Data:</label>
+        <input type="text" class="form-control" id="data" placeholder="Enter 10 comma separated numbers between 1 and 100">
+      </div>
+      <div class="form-group">
+        <label for="average">Average:</label>
+        <output type="text" class="form-control" id="average" readonly></output>
+      </div>
+      <div class="form-group">
+        <label for="maximum">Maximum:</label>
+        <output type="text" class="form-control" id="maximum" readonly></output>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    // Get the input field and output fields
+    var dataInput = document.getElementById("data");
+    var averageOutput = document.getElementById("average");
+    var maximumOutput = document.getElementById("maximum");
+
+    // Listen for the input field to lose focus
+    dataInput.addEventListener("blur", function() {
+      // Get the input value and split it into an array
+      var data = dataInput.value.split(",");
+
+      // Check if there are exactly 10 numbers
+      if (data.length === 10) {
+        // Convert the array elements to numbers and filter out any that are not between 1 and 100
+        data = data.map(function(num) {
+          return parseInt(num.trim());
+        }).filter(function(num) {
+          return num >= 1 && num <= 100;
+        });
+
+        // Check if there are exactly 10 valid numbers
+        if (data.length === 10) {
+          // Calculate the average and maximum
+          var sum = data.reduce(function(acc, val) {
+            return acc + val;
+          }, 0);
+          var average = sum / 10;
+          var maximum = Math.max.apply(null, data);
+
+          // Set the output values
+          averageOutput.value = average.toFixed(2);
+          maximumOutput.value = maximum;
+        } else {
+          alert("Please enter exactly 10 comma-separated numbers between 1 and 100.");
+        }
+      } else {
+        alert("Please enter exactly 10 comma-separated numbers between 1 and 100.");
+      }
+    });
+  </script>
+</body>
+</html>
